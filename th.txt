@@ -1,62 +1,105 @@
-Salesforce and Apex Programming: Theory
-Salesforce is one of the world's leading customer relationship management (CRM) platforms, widely used to manage business operations, sales, customer service, and marketing. Salesforce offers a cloud-based platform with various services, and Apex is its proprietary programming language designed for development within the Salesforce ecosystem. Here’s a breakdown of Salesforce and Apex programming theory:
+Google Cloud Console
+The Google Cloud Console is a web-based interface provided by Google Cloud Platform (GCP) that allows users to manage and interact with various cloud services offered by Google. It provides a user-friendly way to create, configure, and monitor resources and services on the Google Cloud platform.
 
-1. Salesforce Overview:
-Salesforce provides a suite of cloud-based applications that help businesses manage customer relationships, automate processes, and improve efficiency. The platform includes various services like Sales Cloud, Service Cloud, Marketing Cloud, and more.
+Key Features of Google Cloud Console:
+Service Management:
 
-Key Features of Salesforce:
-Cloud Platform: Salesforce operates entirely on the cloud, enabling businesses to scale without needing on-premise infrastructure.
+You can access a wide range of GCP services, such as Compute Engine, Cloud Storage, BigQuery, Kubernetes Engine, and more, directly from the console.
 
-Customizable and Extensible: Businesses can tailor the platform using Salesforce's powerful customization features such as custom objects, fields, and workflows.
+The Console provides a graphical interface for creating, configuring, and managing cloud resources like virtual machines, databases, and storage buckets.
 
-Multi-tenant Architecture: Salesforce is built on a multi-tenant model, meaning all customers share the same infrastructure while keeping their data isolated.
+Dashboard and Monitoring:
 
-AppExchange: The AppExchange is Salesforce's marketplace for third-party apps and integrations, allowing businesses to extend the functionality of the platform.
+The console offers a dashboard where users can view the status of their resources, such as compute instances and storage usage.
 
-Integration: Salesforce allows integration with external systems through various methods like APIs (REST, SOAP), middleware, and other tools.
+Google Cloud Console integrates with Cloud Monitoring and Cloud Logging, allowing users to track the health of their cloud resources, view logs, and set up alerts for issues.
 
-2. Apex Programming:
-Apex is a strongly typed, object-oriented programming language specifically developed for the Salesforce platform. It is used to write custom logic that runs on the Salesforce platform, such as triggers, controllers, or batch jobs.
+IAM (Identity and Access Management):
 
-Key Features of Apex:
-Object-Oriented: Apex follows object-oriented principles like inheritance, polymorphism, and encapsulation. It supports classes, interfaces, and inheritance.
+Through the console, users can configure permissions and roles using IAM to manage who has access to resources and what actions they can perform. It allows administrators to set up secure access controls for users and groups.
 
-Built-in Database Support: Apex has direct access to Salesforce's database (called Salesforce Object Query Language or SOQL), which allows developers to retrieve and manipulate data in Salesforce objects like Accounts, Contacts, and Opportunities.
+Billing and Costs Management:
 
-Multitenancy: Apex code is designed to run on Salesforce’s multi-tenant environment, meaning it must be optimized for shared resources.
+The Google Cloud Console allows users to track their usage and costs in real-time, offering insights into how resources are being utilized. Users can view billing reports, set budgets, and manage cost forecasts.
 
-Governor Limits: Salesforce enforces strict limits on the number of operations that can be performed within a given transaction. Apex developers must ensure their code doesn't exceed these Governor Limits.
+Cloud Shell:
 
-Apex Use Cases:
-Triggers: Automatically run custom logic before or after records are inserted, updated, deleted, or undeleted.
+Google Cloud Console includes an integrated Cloud Shell, a web-based command-line interface that provides access to the Google Cloud SDK (gcloud), so users can interact with resources using commands without needing to install anything locally.
 
-Visualforce Pages: Apex can control Visualforce pages, which are custom UI pages built on Salesforce.
+API and Services:
 
-Scheduled Jobs: Apex allows scheduling of jobs to run at specific times, useful for automating recurring tasks like data cleaning or notifications.
+You can enable, configure, and manage APIs directly from the console. It allows you to integrate third-party services, create and manage API keys, and set up access credentials for API usage.
 
-Batch Apex: This is used for processing large datasets in chunks, often necessary for handling bulk data operations.
+Projects:
 
-Web Services: Apex supports integration with other systems using both RESTful and SOAP web services.
+The console is organized around Projects, which are the basic unit of management for Google Cloud resources. Projects allow you to group resources for billing, access control, and organization.
 
-3. Salesforce Data Model:
-Salesforce's data model is at the core of the platform. It is built around objects, which are analogous to database tables, and records, which are analogous to rows in a database.
+Use Cases:
+Cloud Resource Management: For creating and managing virtual machines (VMs), containers, storage solutions, and networking setups.
 
-Key Concepts in Salesforce Data Model:
-Objects: There are two types of objects in Salesforce:
+Monitoring and Alerting: Monitoring cloud services, setting up alerts for performance or security issues, and analyzing logs.
 
-Standard Objects: These are pre-built objects such as Account, Contact, Lead, and Opportunity.
+Collaboration and Access Control: Assigning roles and permissions to team members, ensuring secure access to the cloud resources.
 
-Custom Objects: These are user-defined objects, which allow businesses to store custom data.
+Google Cloud Engine Admin API
+The Google Cloud Engine Admin API is part of Google Cloud's suite of APIs, specifically designed for managing Google Compute Engine resources programmatically. Compute Engine is Google's Infrastructure-as-a-Service (IaaS) offering, providing scalable virtual machines (VMs) that can be used for running applications, databases, or workloads in the cloud.
 
-Fields: Each object has fields, which store individual data points. Fields can be of various types, such as text, number, picklist, date, etc.
+Key Features of the Google Cloud Engine Admin API:
+Managing Virtual Machines:
 
-Relationships: Objects in Salesforce can be related to one another. The main types of relationships are:
+The API allows users to create, delete, and manage VM instances. It provides operations to start, stop, restart, and update virtual machines, as well as attach and detach disks to VMs.
 
-Lookup Relationship: Similar to a foreign key in relational databases.
+Managing Disks:
 
-Master-Detail Relationship: A stronger relationship where the child record's lifecycle is tied to the parent record.
+Users can interact with persistent disks, creating them, attaching them to VMs, and resizing or deleting them. This is important for storing data or providing additional storage space to VMs.
 
-Many-to-Many Relationship: Achieved using junction objects.
+Managing Networks and Firewalls:
 
-Records: These represent instances of an object. For example, an Account object could have a record representing a particular customer.
+The API allows you to create and configure virtual private networks (VPCs), subnets, and firewall rules that control network traffic to and from VM instances.
+
+Snapshot and Image Management:
+
+You can create snapshots of disks for backup purposes and create images of VM instances to clone configurations or deploy new VMs with identical setups.
+
+Load Balancers and Autoscaling:
+
+The API can be used to configure load balancing for distributing traffic across multiple VMs. It also supports autoscaling, allowing your resources to scale up or down based on traffic and demand.
+
+Service Accounts:
+
+The Compute Engine Admin API integrates with IAM to allow fine-grained access control. Users can assign service accounts to VMs to grant permissions to interact with other GCP services, like Cloud Storage or Pub/Sub.
+
+Metadata Server:
+
+The API enables the use of a metadata server to store and retrieve metadata for VMs, such as configuration information or project-specific settings, that can be used by applications running on the VMs.
+
+Global Resource Management:
+
+The Google Compute Engine Admin API provides global-level control, allowing users to manage resources across multiple regions and zones for high availability and fault tolerance.
+
+Operating System and Configuration Management:
+
+You can customize the configuration of VMs, including setting the operating system, machine type (CPU, memory), and startup scripts to automate initialization tasks.
+
+Core API Endpoints:
+Instances: Managing VM instances (create, list, get, delete, update, etc.).
+
+Disks: Managing disks (create, resize, delete, snapshots, etc.).
+
+Images: Create and manage images used for instance creation.
+
+Snapshots: Taking snapshots of disks for backup.
+
+Networks: Configuring VPCs, subnets, and firewall rules.
+
+Addresses: Managing static IP addresses used by instances.
+
+Use Cases:
+Automated Infrastructure Management: Automating the creation, configuration, and scaling of virtual machines and resources in a compute-heavy environment.
+
+Disaster Recovery: Creating snapshots and images of systems to facilitate recovery in case of failure.
+
+Scaling Applications: Automatically scaling VM resources based on load or demand using autoscaling rules via the API.
+
+Continuous Integration/Continuous Deployment (CI/CD): Programmatically deploying code, testing environments, and managing the lifecycle of VM instances.
 
